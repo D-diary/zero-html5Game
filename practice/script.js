@@ -25,7 +25,7 @@
     snake: [
       { x: 10, y: 10, direction: 2 },
       { x: 10, y: 20, direction: 2 },
-      { x: 10 , y: 30, direction: 2 },
+      { x: 10, y: 30, direction: 2 },
     ],
     food: { x: 0, y: 0 },
     score: 0,
@@ -84,7 +84,7 @@
   }
 
   const setSnake = () => {
-    for (let i = option.snake.length - 1; i >= 0; i--) {
+    for (let i = option.snake.length - 1; i >= 0; --i) {
       buildSnake(ctx, option.snake[i].x, option.snake[i].y, i === 0)
     }
   }
@@ -152,7 +152,7 @@
       x = Math.floor(Math.random() * 25) * 10
       y = Math.floor(Math.random() * 25) * 10
     }
-    option.food = ( x, y )
+    option.food = { x, y }
   }
 
   const playSnake = () => {
